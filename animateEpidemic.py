@@ -34,6 +34,7 @@ class Epidemic:
             status[recoveries, i] = 0
         self.status = np.append(self.status, status[:, 1:], axis=1)
 
+
 def WSNetwork(N, k, p):
     G = nx.watts_strogatz_graph(N, k, p)
     matrix = nx.to_numpy_array(G)
